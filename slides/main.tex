@@ -1,9 +1,12 @@
+% File Format
 \documentclass{beamer}
 \usepackage[T1]{fontenc}
 
+% Include Packages
 \usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra,subcaption}
 \usepackage{graphicx,pstricks,listings,stackengine,enumitem,wrapfig, enumitem}
 
+% Font Setting
 \usepackage{xeCJK}
 \setmainfont{Noto Sans Regular}
 \setCJKsansfont{NotoSansTC}[
@@ -12,10 +15,28 @@
     BoldFont = *-Bold,
 ]
 
+% Useful Macros
 \newcommand{\tb}[1]{\textbf{#1}}
+\newcommand{\slide}[2]{
+    \begin{frame}{#1}
+        #2
+    \end{frame}
+}
+\newcommand{\items}[1]{
+    \begin{itemize}
+           #1
+    \end{itemize}
+}
+\newcommand{\picw}[1]{
+    \begin{center}
+        \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{pic/#1}
+    \end{center}
+}
 
+% Packages Setting
 \setlist[itemize]{itemsep=15pt, label=\textbullet}
 
+% Slides Information
 \author{}
 \title{}
 \institute{}
