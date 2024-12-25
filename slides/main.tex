@@ -1,10 +1,10 @@
-% File Format
 \documentclass{beamer}
 \usepackage[T1]{fontenc}
 
 % Include Packages
-\usepackage{latexsym,amsmath,xcolor,multicol,booktabs,calligra,subcaption}
-\usepackage{graphicx,pstricks,listings,stackengine,enumitem,wrapfig, enumitem}
+\usepackage{latexsym, amsmath, booktabs, subcaption}
+\usepackage{graphicx ,listings, enumitem, enumitem}
+\usepackage{array, adjustbox}
 
 % Font Setting
 \usepackage{xeCJK}
@@ -31,6 +31,18 @@
     \begin{center}
         \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio]{pic/#1}
     \end{center}
+}
+\newcommand{\tablew}[4]{
+    \begin{table}[htbp]
+        \centering
+        \begin{adjustbox}{max totalsize={\textwidth}{0.8\textheight},center,keepaspectratio}
+            \begin{tabular}{#1}
+                #4
+            \end{tabular}
+        \end{adjustbox}
+        \caption{#2}
+        \label{#3}
+    \end{table}
 }
 
 % Packages Setting
